@@ -1,0 +1,97 @@
+//variables
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-family: 'Kumbh Sans', sans-serif; 
+    background-color: var(--dark-cyan);
+    background-image: url('..//images/bg-pattern-top.svg'),
+    url('../images/bg-pattern-bottom.svg');
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    background-color: white;
+    width: 326px;
+    border-radius: 16px;
+    overflow: hidden;
+    //sombra tarjeta
+    box-shadow: 10px 10px 10px darkslateblue;
+
+//asi accedemos con sass a la clase de forma mas rapida la & remplaza card  
+    &-header{
+        width: 350px;
+        display: block;
+    }
+
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid var(--dark-gray);
+    }
+    
+    &-body-img{
+        border: 5px solid darkslateblue;
+        border-radius:  50%;
+        margin-top: calc(-48px - 5px);
+    }
+
+    &-title{
+        margin-top: 2rem;
+        font-size: 1.8rem;
+
+        span{
+            font-size: var(--dark-gray);
+            font-weight: 400;
+            margin-left: 1rem;
+        }
+     
+}
+.card-body-text{
+    color: var(--dark-gray);
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+    &-footer{
+        display: flex;
+        justify-content: space-around;
+
+        &-social{
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            p{
+                letter-spacing: 1px;
+            }
+
+            h3{
+                font-size: 15px;
+            }
+        }
+    }
+
+}
+
